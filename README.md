@@ -16,38 +16,6 @@ PyNikto is a Python-based web server scanner inspired by Nikto, designed for sec
 - ⚡ **Concurrent Scanning**: Multi-threaded for fast scanning
 - 🎯 **Tuning Options**: Filter tests by category (XSS, SQL injection, etc.)
 
-## Installation
-
-### Kali Linux / Debian / Ubuntu
-
-```bash
-# Clone the repository
-git clone https://github.com/sudo-zenjy/pynikto.git
-cd pynikto
-
-# Install dependencies
-sudo apt-get update
-sudo apt-get install -y python3 python3-pip python3-venv nmap
-
-# Create and activate virtual environment (Kali Linux requirement)
-python3 -m venv venv
-source venv/bin/activate
-
-# Install Python dependencies
-pip install -r requirements.txt
-
-# Make scripts executable
-chmod +x nmap_pynikto.sh
-chmod +x nikto.py
-```
-
-### Other Linux Distributions
-
-```bash
-# Install Python 3.7+ and pip
-# Then install dependencies
-pip3 install -r requirements.txt
-```
 
 ### Windows
 
