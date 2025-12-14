@@ -5,21 +5,27 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "pynikto"
 version = "0.1.0"
-description = "Python-based web server scanner inspired by Nikto"
-authors = [
-    { name="sudo-zenjy" }
-]
+description = "Python-based Nikto-style web server scanner"
 readme = "README.md"
 requires-python = ">=3.7"
-license = { text = "GPL-3.0" }
+license = "GPL-3.0-only"
+authors = [
+  { name = "sudo-zenjy" }
+]
 
 dependencies = [
-    "requests",
-    "beautifulsoup4",
-    "lxml",
-    "colorama",
-    "tqdm"
+  "requests",
+  "beautifulsoup4",
+  "lxml",
+  "colorama",
+  "tqdm"
 ]
 
 [project.scripts]
 pynikto = "nikto:main"
+
+[tool.setuptools]
+py-modules = ["nikto"]
+
+[tool.setuptools.packages.find]
+include = ["plugins", "databases"]
