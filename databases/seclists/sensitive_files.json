@@ -1,0 +1,72 @@
+[
+  {
+    "path": "/.env",
+    "description": "Environment configuration file",
+    "risk": "high"
+  },
+  {
+    "path": "/.git/config",
+    "description": "Git configuration may expose repository structure",
+    "risk": "medium"
+  },
+  {
+    "path": "/.htaccess",
+    "description": "Apache configuration file",
+    "risk": "info"
+  },
+  {
+    "path": "/.htpasswd",
+    "description": "Apache password file",
+    "risk": "high"
+  },
+  {
+    "path": "/backup.sql",
+    "description": "Database backup file",
+    "risk": "high"
+  },
+  {
+    "path": "/config.inc.php",
+    "description": "PHP configuration file",
+    "risk": "high"
+  },
+  {
+    "path": "/config.json",
+    "description": "Configuration file",
+    "risk": "medium"
+  },
+  {
+    "path": "/config.yaml",
+    "description": "YAML configuration file",
+    "risk": "medium"
+  },
+  {
+    "path": "/credentials.txt",
+    "description": "Credentials file",
+    "risk": "high"
+  },
+  {
+    "path": "/database.sql",
+    "description": "Database dump",
+    "risk": "high"
+  },
+  {
+    "path": "/dump.sql",
+    "description": "Database dump",
+    "risk": "high"
+  },
+  {
+    "path": "/passwords.txt",
+    "description": "Password file",
+    "risk": "high"
+  },
+  {
+    "path": "/secrets.json",
+    "description": "Secrets file",
+    "risk": "high"
+  },
+  {
+    "path": "/web.config",
+    "description": "IIS configuration file",
+    "risk": "medium"
+  }
+]

@@ -1,0 +1,65 @@
+[
+  {
+    "id": "CVE-2023-XXXX-example",
+    "info": {
+      "name": "Example WordPress Plugin Vulnerability",
+      "severity": "high",
+      "description": "WordPress plugin vulnerable to SQL injection",
+      "reference": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-XXXX"
+    },
+    "requests": [
+      {
+        "method": "GET",
+        "path": ["/wp-content/plugins/vulnerable-plugin/admin.php?id=1'"],
+        "matchers": [
+          {
+            "type": "word",
+            "words": ["mysql", "sql syntax", "database error"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "exposed-admin-panel",
+    "info": {
+      "name": "Exposed Admin Panel",
+      "severity": "medium",
+      "description": "Admin panel accessible without authentication",
+      "reference": ""
+    },
+    "requests": [
+      {
+        "method": "GET",
+        "path": ["/admin", "/administrator", "/wp-admin"],
+        "matchers": [
+          {
+            "type": "status",
+            "status": [200, 301, 302]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "phpinfo-exposure",
+    "info": {
+      "name": "PHP Info Exposure",
+      "severity": "medium",
+      "description": "phpinfo.php file exposes server configuration",
+      "reference": "CWE-200"
+    },
+    "requests": [
+      {
+        "method": "GET",
+        "path": ["/phpinfo.php", "/info.php", "/test.php"],
+        "matchers": [
+          {
+            "type": "word",
+            "words": ["PHP Version", "phpinfo()", "System"]
+          }
+        ]
+      }
+    ]
+  }
+]

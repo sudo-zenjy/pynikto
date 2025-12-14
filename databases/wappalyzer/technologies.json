@@ -1,0 +1,107 @@
+[
+  {
+    "name": "WordPress",
+    "url": "/wp-content/",
+    "html": ["wp-content", "wp-includes", "wp-admin"],
+    "headers": {
+      "X-Powered-By": "WordPress"
+    },
+    "cookies": {
+      "wordpress_": "",
+      "wp-settings": ""
+    },
+    "scripts": ["wp-content/themes", "wp-content/plugins"]
+  },
+  {
+    "name": "Joomla",
+    "url": "/administrator/",
+    "html": ["joomla", "Joomla!", "option=com_"],
+    "headers": {
+      "X-Content-Encoded-By": "Joomla!"
+    },
+    "cookies": {
+      "joomla_user_state": ""
+    },
+    "scripts": ["/media/system/js/", "/components/"]
+  },
+  {
+    "name": "Drupal",
+    "url": "/sites/default/",
+    "html": ["Drupal", "drupal.js", "sites/default"],
+    "headers": {
+      "X-Drupal-Cache": ""
+    },
+    "cookies": {
+      "SESS": ""
+    },
+    "scripts": ["/misc/drupal.js", "/modules/"]
+  },
+  {
+    "name": "Apache",
+    "url": "/",
+    "html": [],
+    "headers": {
+      "Server": "Apache"
+    },
+    "cookies": {},
+    "scripts": []
+  },
+  {
+    "name": "Nginx",
+    "url": "/",
+    "html": [],
+    "headers": {
+      "Server": "nginx"
+    },
+    "cookies": {},
+    "scripts": []
+  },
+  {
+    "name": "PHP",
+    "url": "/",
+    "html": [],
+    "headers": {
+      "X-Powered-By": "PHP"
+    },
+    "cookies": {},
+    "scripts": []
+  },
+  {
+    "name": "PHPMyAdmin",
+    "url": "/phpmyadmin/",
+    "html": ["phpMyAdmin", "pma_"],
+    "headers": {},
+    "cookies": {
+      "pma_": ""
+    },
+    "scripts": ["/phpmyadmin/"]
+  },
+  {
+    "name": "cPanel",
+    "url": "/cpanel/",
+    "html": ["cPanel", "WHM"],
+    "headers": {},
+    "cookies": {},
+    "scripts": ["/cpanel/"]
+  },
+  {
+    "name": "Laravel",
+    "url": "/",
+    "html": [],
+    "headers": {
+      "X-Powered-By": "Laravel"
+    },
+    "cookies": {
+      "laravel_session": ""
+    },
+    "scripts": []
+  },
+  {
+    "name": "React",
+    "url": "/",
+    "html": ["react", "React"],
+    "headers": {},
+    "cookies": {},
+    "scripts": ["/static/js/", "react.js", "react-dom.js"]
+  }
+]

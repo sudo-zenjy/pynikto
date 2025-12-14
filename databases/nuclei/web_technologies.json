@@ -1,0 +1,65 @@
+[
+  {
+    "id": "apache-server-detection",
+    "info": {
+      "name": "Apache Server Detection",
+      "severity": "info",
+      "description": "Detects Apache web server",
+      "reference": ""
+    },
+    "requests": [
+      {
+        "method": "GET",
+        "path": ["/"],
+        "matchers": [
+          {
+            "type": "word",
+            "words": ["Apache", "Server: Apache"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "php-version-disclosure",
+    "info": {
+      "name": "PHP Version Disclosure",
+      "severity": "low",
+      "description": "PHP version information exposed in headers",
+      "reference": "CWE-200"
+    },
+    "requests": [
+      {
+        "method": "GET",
+        "path": ["/"],
+        "matchers": [
+          {
+            "type": "word",
+            "words": ["X-Powered-By: PHP"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "directory-listing",
+    "info": {
+      "name": "Directory Listing Enabled",
+      "severity": "medium",
+      "description": "Directory listing is enabled, exposing file structure",
+      "reference": "CWE-548"
+    },
+    "requests": [
+      {
+        "method": "GET",
+        "path": ["/"],
+        "matchers": [
+          {
+            "type": "word",
+            "words": ["Index of", "Directory listing", "Parent Directory"]
+          }
+        ]
+      }
+    ]
+  }
+]

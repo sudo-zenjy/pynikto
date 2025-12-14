@@ -1,0 +1,62 @@
+[
+  {
+    "cve_id": "CVE-2023-12345",
+    "path": "/wp-content/plugins/vulnerable-plugin/admin.php",
+    "description": "WordPress Plugin SQL Injection vulnerability",
+    "severity": "high",
+    "method": "GET",
+    "match_status": [200, 301, 302],
+    "references": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-12345",
+    "match_1": "mysql",
+    "match_1_and": "error"
+  },
+  {
+    "cve_id": "CVE-2023-23456",
+    "path": "/api/v1/users",
+    "description": "API endpoint vulnerable to unauthorized access",
+    "severity": "medium",
+    "method": "GET",
+    "match_status": [200],
+    "references": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-23456"
+  },
+  {
+    "cve_id": "CVE-2023-34567",
+    "path": "/admin/login.php",
+    "description": "Admin panel vulnerable to brute force attacks",
+    "severity": "medium",
+    "method": "POST",
+    "match_status": [200, 302],
+    "references": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-34567"
+  },
+  {
+    "cve_id": "CVE-2023-45678",
+    "path": "/upload.php",
+    "description": "File upload functionality vulnerable to arbitrary file upload",
+    "severity": "high",
+    "method": "POST",
+    "match_status": [200, 201],
+    "references": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-45678"
+  },
+  {
+    "cve_id": "CVE-2023-56789",
+    "path": "/index.php?page=../../etc/passwd",
+    "description": "Local File Inclusion (LFI) vulnerability",
+    "severity": "high",
+    "method": "GET",
+    "match_status": [200],
+    "references": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-56789",
+    "match_1": "root:",
+    "match_1_and": "/bin/bash"
+  },
+  {
+    "cve_id": "CVE-2023-67890",
+    "path": "/api/endpoint?id=1' OR '1'='1",
+    "description": "SQL Injection vulnerability in API endpoint",
+    "severity": "critical",
+    "method": "GET",
+    "match_status": [200, 500],
+    "references": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-67890",
+    "match_1": "sql syntax",
+    "match_1_or": "mysql error"
+  }
+]

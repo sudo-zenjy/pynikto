@@ -1,0 +1,52 @@
+[
+  {
+    "cve_id": "CWE-79",
+    "path": "/search?q=<script>alert(1)</script>",
+    "description": "Cross-Site Scripting (XSS) vulnerability",
+    "severity": "medium",
+    "method": "GET",
+    "match_status": [200],
+    "references": "https://cwe.mitre.org/data/definitions/79.html",
+    "match_1": "<script>alert(1)</script>"
+  },
+  {
+    "cve_id": "CWE-89",
+    "path": "/search?id=1' OR '1'='1",
+    "description": "SQL Injection vulnerability",
+    "severity": "high",
+    "method": "GET",
+    "match_status": [200, 500],
+    "references": "https://cwe.mitre.org/data/definitions/89.html",
+    "match_1": "sql syntax",
+    "match_1_or": "mysql error"
+  },
+  {
+    "cve_id": "CWE-434",
+    "path": "/upload",
+    "description": "Unrestricted file upload vulnerability",
+    "severity": "high",
+    "method": "POST",
+    "match_status": [200, 201],
+    "references": "https://cwe.mitre.org/data/definitions/434.html"
+  },
+  {
+    "cve_id": "CWE-22",
+    "path": "/download?file=../../../etc/passwd",
+    "description": "Path Traversal vulnerability",
+    "severity": "high",
+    "method": "GET",
+    "match_status": [200],
+    "references": "https://cwe.mitre.org/data/definitions/22.html",
+    "match_1": "root:",
+    "match_1_and": "/bin/bash"
+  },
+  {
+    "cve_id": "CWE-352",
+    "path": "/api/csrf-test",
+    "description": "Cross-Site Request Forgery (CSRF) vulnerability",
+    "severity": "medium",
+    "method": "POST",
+    "match_status": [200, 302],
+    "references": "https://cwe.mitre.org/data/definitions/352.html"
+  }
+]
